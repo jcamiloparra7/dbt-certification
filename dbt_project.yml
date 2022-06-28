@@ -32,7 +32,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  dimensions:
-    materialized: table
-  staging:
-    materialized: table
+  my_new_project: # this matches the `name:`` config
+    +materialized: table # this applies to all models in the current project
